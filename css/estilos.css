@@ -12,7 +12,12 @@ body{
 /*site padrão*/
 
 header{
-  height: 55vh;
+  height: 52vh;
+}
+
+.menu{
+  padding-bottom: 25vh;
+  
 }
 
 .menu li{
@@ -24,10 +29,29 @@ header{
   display:flex;
   justify-content: space-around;
   font-family:monospace;
-  font-size:2.5vh;
+  font-size:3vh;
   background-color: whitesmoke;
   position: fixed;
   width: 100vw;
+  z-index: 2;
+  top:0;
+}
+
+.menu a{
+  display: block;
+  padding: 15px;
+  transition: color .75s, background-color 0.75s;
+}
+
+.menu a:active{
+  background-color: gray;
+  color: white;
+}
+
+
+.menu a:hover{
+  background-color: gray;
+  color: white;
 }
 
 a{
@@ -37,40 +61,44 @@ a{
 
 a:hover{
 text-decoration:underline;
+
 }
 
 .site-title, .site-subtitle{
   font-family:monospace;
   color:whitesmoke;
-  text-align: left;
-  
+  text-align: left;  
 }
 
 .site-title{
   font-size:5vw;
-  padding-top: 20vh;
-  padding-right: 1vw;
- 
+  /*padding-top: 25vh;*/
+  
 }
 
-.site-title{
+.typewriter h1{
   color:whitesmoke;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin-top:100vh ;
-  margin:auto; /* Gives that scrolling effect as the typing happens */
+  margin:auto auto; /* Gives that scrolling effect as the typing happens */
+  margin-left: 1em;
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
+
      typing 3.35s steps(90, end),
       blink-caret .5s step-end infinite;
 }
     
+.typewriter{
+display: inline-block;}
+
     /* The typing effect */
     @keyframes typing {
       from { width: 0% }
-      to { width:100%}
+      to { width:96%}
+
     }
     
     /* The typewriter cursor effect */
@@ -82,40 +110,132 @@ text-decoration:underline;
 .site-subtitle{
   font-style:italic;
   font-size:4vw;
-  padding-right: 3vw;
+  padding-right: 3.5vw;
   letter-spacing: .10em;
-}
-
-.img-tema{
-  height: 30vh;
-  width: auto;
-  padding-left: 5vw;
-
+  margin-left: 1.2em;
+  
 }
 
 section{
-  background-color: whitesmoke;
+  background-color:whitesmoke;
   font-family: monospace;
   height: 50Vh;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+#img-tema{
+  height: 45em;
+  width: auto;
+  margin-left: 4vw;
+  margin-right: 3vw;
+  clip-path: polygon(41% 0, 100% 0, 74% 35%, 100% 35%, 0 94%, 37% 46%, 0 46%);
+  float: left;
+  z-index: 1;
 }
 
 .tema{
   font-size: 5vw;
-  text-align: center;
-  padding: 5vh;
-}
-
-div{
-  display: flex;
-  align-content: center;
-  justify-content: center;
+  text-align:left;
+  padding: 2em;
 }
 
 .txt-tema{
-  font-size: 3vw;
-  padding: 5vw;
+  font-size: 3.5vw;
+  text-align: left;
+  padding-right: 1em;
+  text-indent: 1.5em;
 }
+
+.txt-tema1{
+  font-size: 3.5vw;
+  text-align: left;
+  padding-right: 1em;
+  text-indent: 1.5em;
+}
+
+.intermed-bg1{
+  background-color: lightgray;
+  height: auto;
+  text-align: center;
+}
+
+.img-intermed1{
+  max-width:80vw;
+  height:auto;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio{
+  height: auto;
+  background-color: whitesmoke;
+}
+
+.exp-title{
+  font-size: 5vw;
+  text-align:left;
+  padding: 2em;
+}
+
+.img-destaque-exp{
+  display: flex;
+  width: 33em;
+  height: auto;
+  border-radius: 40%;
+  display: block;
+  margin: 0 auto 6vh auto;
+}
+
+.experiencias{
+  display: grid;
+  grid-template-columns: 29em 29em;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 3em;
+}
+
+.img-experiencia{
+  width:25em ;
+  height: 25em;
+  border-radius: 50%;
+}
+
+figcaption{
+  text-align:center;
+  font-size: 3vw;
+  padding-top: 1.75em;
+  padding-bottom: 3em;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*site modo grande*/
@@ -125,6 +245,7 @@ div{
     font-size:3vw;
     padding-top:5vh ;
     padding-right: 1vw;
+    text-align: right;
 
     color:whitesmoke;
     font-family: monospace;
@@ -137,7 +258,7 @@ div{
        typing 3.35s steps(90, end),
         blink-caret .5s step-end infinite;
   
-      
+    
       /* The typing effect */
       @keyframes typing {
         from { width: 0% }
@@ -153,7 +274,11 @@ div{
   
   }
 
-  body .site-title, .site-subtitle{
+  body.typewriter{
+    
+  }
+
+  .site-subtitle{
     text-align: right;
     
   }
@@ -171,7 +296,7 @@ div{
     padding-right: 3vw;
   }
 
-  body .img-portfolio{
+  body .img-tema{
     height: auto;
     width: auto;
   }
@@ -189,16 +314,3 @@ div{
   }  
 
 }
-
-/*
-<figure>
-  <img class="img-portfolio" src="./img/2.jpg" alt=">Mobile">
-  <figcaption>Mobile</figcaption>
-</figure>
-<figure>
-  <img class="img-portfolio" src="./img/perfil.jpeg" alt="eCommerce">
-  <figcaption>Web design</figcaption>
-</figure>
-<figure>
-  <img class="img-portfolio" src="./img/3.jpg" alt="Projetos pessoais">
-  <figcaption>Projetos pessoais</figcaption>*/

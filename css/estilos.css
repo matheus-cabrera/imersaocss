@@ -72,8 +72,6 @@ text-decoration:underline;
 
 .site-title{
   font-size:5vw;
-  /*padding-top: 25vh;*/
-  
 }
 
 .typewriter h1{
@@ -119,10 +117,11 @@ display: inline-block;}
 section{
   background-color:whitesmoke;
   font-family: monospace;
-  height: 50Vh;
+  height: 48vh;
   margin-right: auto;
   margin-left: auto;
 }
+
 
 #img-tema{
   height: 45em;
@@ -144,6 +143,7 @@ section{
   font-size: 3.5vw;
   text-align: left;
   padding-right: 1em;
+  padding-top: 1em;
   text-indent: 1.5em;
 }
 
@@ -211,6 +211,40 @@ figcaption{
   padding-left: 1em;
 }
 
+.contato{
+  background-color: black;
+  color: whitesmoke;
+}
+
+.contato-title{
+  font-size: 5vw;
+  text-align:left;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+
+.txt-contato{
+  font-size: 3vw;
+  padding-left: 4em;
+  padding-top: 0.8em;
+}
+
+.grid-icons{
+  display: grid;
+  grid-template-columns: 20em 20em;
+  justify-content: center;
+  margin-top: 10em;
+}
+
+i{
+  color:whitesmoke;
+  font-size: 15em;
+}
+
+
+
+
+
 
 
 
@@ -272,10 +306,6 @@ figcaption{
       }
   
   
-  }
-
-  body.typewriter{
-    
   }
 
   .site-subtitle{

@@ -185,6 +185,12 @@ section{
   border-radius: 40%;
   display: block;
   margin: 0 auto 6vh auto;
+  transition: transform 0.5s;
+}
+
+.img-destaque-exp:active,
+.img-destaque-exp:hover{
+  transform: scale(1.1);
 }
 
 .experiencias{
@@ -200,6 +206,12 @@ section{
   width:25em ;
   height: 25em;
   border-radius: 50%;
+  transition: transform 0.5s;
+}
+
+.img-experiencia:active,
+.img-experiencia:hover{
+  transform: scale(1.2);
 }
 
 figcaption{
@@ -214,6 +226,7 @@ figcaption{
 .contato{
   background-color: black;
   color: whitesmoke;
+  height: 60vh;
 }
 
 .contato-title{
@@ -231,15 +244,29 @@ figcaption{
 
 .grid-icons{
   display: grid;
-  grid-template-columns: 20em 20em;
+  grid-template-columns: 25em 25em;
   justify-content: center;
-  margin-top: 10em;
+  text-align: center;
+  align-items: center;
+  margin-top: 1em;
 }
 
 i{
   color:whitesmoke;
   font-size: 15em;
+  margin: .05em;
+  padding-top: .3em;
+  transition: text-shadow .6s,
+  transform 500ms;
 }
+
+i:active,
+i:hover{
+  text-shadow: 0px 0px 30px rgba(255,255,0,.7);
+  transform: scale(1.1) ;
+}
+
+
 
 
 
